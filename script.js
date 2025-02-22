@@ -5,7 +5,7 @@ function sendMessage() {
   const userMessage = userInput.value;
   chatbox.innerHTML += `<div class="user-message">${userMessage}</div>`;
 
-  fetch('https://api.google.com/language/conversational/v1/models:converse', {
+  fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
